@@ -1,4 +1,4 @@
-dist = [ [5, 5, 5, 7, 10, 5, 5, 6, 6, 5],
+dist = [ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
   [5, 10, 10, 10, 10, 10, 1, 10, 10, 10],
   [9,10, 10, 10, 1, 10, 10, 6, 5, 10],
@@ -42,7 +42,7 @@ for ( var i = 0; i < 10; i++) {
   console.log(dist[i])
 }
 */
-
+b = []
 console.log(cities1)
 function heldKarp (cities, start) {
   if (cities.length == 2) {
@@ -64,6 +64,7 @@ function heldKarp (cities, start) {
         min = heldKarp(temp, temp[i]) + dist[start][temp[i]];
       }
     }
+
     return min;
   }
 }
